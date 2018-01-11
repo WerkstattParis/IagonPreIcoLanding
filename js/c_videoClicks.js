@@ -1,7 +1,7 @@
 
 function video1Click() {
     $('#videoSrc').fadeOut(0);
-    document.getElementById("videoSrc").src = "http://w3schools.com/html/mov_bbb.mp4";
+    document.getElementById("videoSrc").src = "http://winjitstaging.cloudapp.net/botimages/IAGON_LowRes_V3.mp4";
     $('#videoSrc').fadeIn(1500);
     document.getElementById("vid1").src = "images/_vid_1_sel.png";
     document.getElementById("vid2").src = "images/vid_2.png";
