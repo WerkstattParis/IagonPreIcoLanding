@@ -77,13 +77,13 @@ vertical-align:bottom;
 padding-top:60px;}
 /*-- page --*/ 
 .page{
-	background:url(../images/banner_new.png) no-repeat right top;
-	-webkit-background-size:contain;
-	-moz-background-size:contain;
+	background:url(../images/try_2/banner_new_desktop.png)no-repeat right top;
+	-webkit-background-size:contain; 
+	-moz-background-size:contain; 
 	-o-background-size:contain;
-	-ms-background-size:contain;
-	background-size: contain;
-	
+	-ms-background-size:contain; 	
+	background-size:contain; 
+	min-height: 790px;
 } 
 
 /*-Fonts ---*/
@@ -451,8 +451,8 @@ padding-bottom:20px;
  #sidebar.affix {
                 position: fixed;
                 top: 200px;
-                width: auto;
-                z-index: 1;
+                width: 228px;
+                z-index: 999;
             }
 						
 .listtext{	font-family:FontLight;
@@ -484,9 +484,7 @@ padding-bottom:20px;
             list-style-type: circle !important;
         }
 		
-.form-group{
-	padding-top:5px; padding-bottom:5px;
-}
+.form-group{}
 
 .li-text{
     color:#737373;
@@ -512,8 +510,9 @@ li-text:focus{
 }
 
 video::-webkit-media-controls {
-    display: none;
+    /* display: none; */
   }
+
 
 
 
@@ -824,6 +823,9 @@ margin-right:0px; }
 
 
 @media (max-width:1024px){
+
+
+	
 .padding_top_bottom_false{
     padding-bottom: 0px;
     padding-top: 0px;
@@ -1116,6 +1118,16 @@ padding-top:40px;}
 
 @media(max-width:667px){
 
+	.page{ 
+		background:url(../images/try_2/banner_new_mobile.png)no-repeat right top;
+		-webkit-background-size:contain; 
+		-moz-background-size:contain; 
+		-o-background-size:contain;
+		-ms-background-size:contain; 	
+		background-size:contain; 
+		min-height: 790px;
+	} 
+
 	.padding_top_bottom_false{
 		padding-bottom: 0px;
 		padding-top: 0px;
@@ -1144,6 +1156,16 @@ padding-top:40px;}
 
 
 @media (max-width:640px){
+
+	.page{ 
+		background:url(../images/try_2/banner_new_mobile.png)no-repeat right top;
+		-webkit-background-size:contain; 
+		-moz-background-size:contain; 
+		-o-background-size:contain;
+		-ms-background-size:contain; 	
+		background-size:contain; 
+		min-height: 790px;
+	} 
 
 	.padding_top_bottom_false{
 		padding-bottom: 0px;
@@ -1245,6 +1267,16 @@ color:#26a5ee;}
 
 @media(max-width:600px){
 
+	.page{ 
+		background:url(../images/try_2/banner_new_mobile.png)no-repeat right top;
+		-webkit-background-size:contain; 
+		-moz-background-size:contain; 
+		-o-background-size:contain;
+		-ms-background-size:contain; 	
+		background-size:contain; 
+		min-height: 790px;
+	} 
+
 	.padding_top_bottom_false{
 		padding-bottom: 0px;
 		padding-top: 0px;
@@ -1267,6 +1299,15 @@ text-align:right;
 
 @media(max-width:568px){
 
+	.page{ 
+		background:url(../images/try_2/banner_new_mobile.png)no-repeat right top;
+		-webkit-background-size:contain; 
+		-moz-background-size:contain; 
+		-o-background-size:contain;
+		-ms-background-size:contain; 	
+		background-size:contain; 
+		min-height: 790px;
+	} 
 
 	.padding_top_bottom_false{
 		padding-bottom: 0px;
@@ -1292,6 +1333,15 @@ text-align:right;
 
 @media (max-width:480px){
 
+	.page{ 
+		background:url(../images/try_2/banner_new_mobile.png)no-repeat right top;
+		-webkit-background-size:contain; 
+		-moz-background-size:contain; 
+		-o-background-size:contain;
+		-ms-background-size:contain; 	
+		background-size:contain; 
+		min-height: 790px;
+	} 
 
 	.padding_top_bottom_false{
 		padding-bottom: 0px;
@@ -1373,6 +1423,16 @@ p {
 
 @media(max-width:414px){
 
+	.page{ 
+		background:url(../images/try_2/banner_new_mobile.png)no-repeat right top;
+		-webkit-background-size:contain; 
+		-moz-background-size:contain; 
+		-o-background-size:contain;
+		-ms-background-size:contain; 	
+		background-size:contain; 
+		min-height: 790px;
+	} 
+
 	.padding_top_bottom_false{
 		padding-bottom: 0px;
 		padding-top: 0px;
@@ -1407,6 +1467,16 @@ text-align:right;
 
 }
 @media(max-width:384px){
+
+	.page{ 
+		background:url(../images/try_2/banner_new_mobile.png)no-repeat right top;
+		-webkit-background-size:contain; 
+		-moz-background-size:contain; 
+		-o-background-size:contain;
+		-ms-background-size:contain; 	
+		background-size:contain; 
+		min-height: 790px;
+	} 
 	.padding_top_bottom_false{
 		padding-bottom: 0px;
 		padding-top: 0px;
@@ -1428,6 +1498,16 @@ text-align:right;
 
 } 
 @media(max-width:320px){
+
+	.page{ 
+		background:url(../images/try_2/banner_new_mobile.png)no-repeat right top;
+		-webkit-background-size:contain; 
+		-moz-background-size:contain; 
+		-o-background-size:contain;
+		-ms-background-size:contain; 	
+		background-size:contain; 
+		min-height: 790px;
+	} 
 
 	.padding_top_bottom_false{
 		padding-bottom: 0px;

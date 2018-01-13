@@ -176,7 +176,7 @@ var waypointRoadMapUp = new Waypoint({
       $("#liteam").removeAttr("type", "disc");
     }
   },
-  offset: '2%'
+  offset: -50
 })
 //RoadMap End
 
