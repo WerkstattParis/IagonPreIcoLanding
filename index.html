@@ -36,6 +36,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all" property="" />
   <link href="css/font-awesome.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="./images/iagon_logo.ico" />
+  <link href="css/werkstatt.css" type="text/css" rel="stylesheet" media="all">
 </head>
 
 <body>
@@ -475,11 +476,77 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <!--Road Map-->
     <div id="_RoadMap" class="row" style="margin-left:auto; margin-right:auto; text-align:center">
-      <!-- <img src="images/roadMap.png" class="img-responsive"> -->
-      <div class="embed-responsive embed-responsive-16by9" style="height: 600px!important;">
-        <iframe class="embed-responsive-item" src="./Roadmap/RoadMap.html"></iframe>
+      <div id="roadmap-elm" class="roadmap-surcontainer">
+        <div class="roadmap-container">
+          <div class="frise-dom-container">
+            <div class="frise-dom">
+              <div class="title-bar">
+                <h2>road map</h2>
+                <div class="subtitle">
+                  <h3>Our development roadmap for
+                    <span>the next year.</span>
+                  </h3>
+                  <p>Follow the Innovative path of
+                    <span>iagon</span>’s Revolution</p>
+                </div>
+              </div>
+              <div id="frise" class="frise">
+                <ul>
+                  <li class="active">
+                    <span class="date">Sept. 2017</span>
+                    <p>Platform Design
+                      <br>& Architecture</p>
+                  </li>
+                  <li>
+                    <span class="date">Oct. 2017</span>
+                    <p>Platform Development
+                      <br>Kick Off</p>
+                  </li>
+                  <li>
+                    <span class="date">Nov. 2017</span>
+                    <p>Whitepaper Presentation</p>
+                  </li>
+                  <li>
+                    <span class="date">Dec. 2017</span>
+                    <p>Platform Launch</p>
+                  </li>
+                  <li>
+                    <span class="date">Feb. 2018</span>
+                    <p>Pre-ICO</p>
+                  </li>
+                  <li>
+                    <span class="date">Mar. 2018</span>
+                    <p>ICO Launch</p>
+                  </li>
+                  <li>
+                    <span class="date">May 2018</span>
+                    <p>Smart Contract</p>
+                  </li>
+                  <li>
+                    <span class="date">Aug. 2018</span>
+                    <p>Distributed Storage</p>
+                  </li>
+                  <li>
+                    <span class="date">Nov. 2018</span>
+                    <p>Distribued Processing</p>
+                  </li>
+                  <li>
+                    <span class="date">Jan. 2019</span>
+                    <p>Integrated DApps</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="last-tile" id="last-tile">
+            <div class="content">
+              <span class="date">January 2019</span>
+              <p>Integrated
+                <br>DApps</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- <iframe src="./Roadmap/RoadMap.html" style="width:100%;min-height:600px;border: none"></iframe> -->
     </div>
 
     <div class="container">
@@ -912,6 +979,51 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <script src="js/slick.min.js"></script>
   <script src="js/sticky.js"></script>
   <script src="js/custom.js"></script>
+  <script type="x-shader/x-vertex" id="vertexShader">  
+    varying vec2 vUv;
+
+    void main () {
+      vUv = uv;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }
+  </script>
+  <script type="x-shader/x-fragment" id="fragmentShader">
+    uniform sampler2D texture1;
+    uniform vec2 offset;
+    varying vec2 vUv;
+    
+    void main() {
+      vec2 uv = vUv + offset;
+      gl_FragColor = texture2D(texture1, uv );
+    }
+  </script>
+
+  <script type="x-shader/x-vertex" id="vertexshader2">
+    attribute float alpha;
+    varying float vAlpha;
+    varying vec2 vUv;
+    
+    void main() {
+      vUv = uv;
+      vAlpha = alpha;
+      vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+      gl_Position = projectionMatrix * mvPosition;
+      gl_PointSize = max(8.0-(gl_Position.z * 1.5) , 2.0);
+    }
+  </script>
+  <script type="x-shader/x-fragment" id="fragmentshader2">
+    uniform sampler2D texturedisc;
+    uniform vec3 color;
+    varying float vAlpha;
+    uniform float time;
+    varying vec2 vUv;
+
+    void main() {
+      float alpha =  max( sin(vAlpha-time), 0.2 );
+      gl_FragColor = texture2D(texturedisc, gl_PointCoord );
+      gl_FragColor = vec4(gl_FragColor.xyz, gl_FragColor.a * alpha );
+    }
+  </script>
   <script type="text/javascript" src="js/typewriterFade.js"></script>
   <!-- <script src="https://cdn.zingchart.com/zingchart.min.js"></script> -->
   <script src="lib/superfish/superfish.min.js"></script>
@@ -934,6 +1046,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <script src="js/c_mobileMenuClick.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/waypointClick.js"></script>
+  <script src="js/werkstatt-vendor.js"></script>
+  <script src="js/werkstatt-main.js"></script>
   <!-- <script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/"; ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];</script> -->
 
 
